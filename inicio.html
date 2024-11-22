@@ -1,0 +1,83 @@
+﻿
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEJA BEM VINDO</title>
+  
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+   
+    <div>
+        <a href="inicio.html">Início</a>
+        <a href="fotos.html">Fotos</a>
+        <a href="contato.html">Contato</a>
+        <a href="video.html">Vídeo</a>
+        <a href="audio.html">Áudio</a>
+    </div>
+
+ 
+    <h1>Olá, esta página será sobre a fauna animal</h1>
+    <p>Aqui você verá tudo sobre a fauna de nosso mundo.</p>
+    <p><font color="yellow" face="cortana" size="3">Neste site, você aprenderá um pouco sobre zoologia.</font></p>
+
+    <p><b>Entre em contato para mais informações</b></p>
+    <p><i>Nos procure em nossas redes sociais.</i></p>
+    <p><u>Volte sempre, agradecemos a visita!</u></p>
+
+    
+    <div class="typing" id="texto">Eleve seu conhecimento!</div>
+    <button onclick="alterarTexto()">Clique Aqui Por Favor</button>
+
+    
+    <div class="slideshow-container">
+        <p><i><font color="red">Para aquecer seu coração, veja animais muito fofinhos</font></i></p>
+        <div class="slides">
+            <img src="imagem1.jpg" alt="Imagem 1">
+        </div>
+        <div class="slides">
+            <img src="imagem2.jpg" alt="Imagem 2">
+        </div>
+        <div class="slides">
+            <img src="imagem3.jpg" alt="Imagem 3">
+        </div>
+        <div class="slides">
+            <img src="imagem4.jpg" alt="Imagem 4">
+        </div>
+        <div class="slides">
+            <img src="imagem5.jpg" alt="Imagem 5">
+        </div>
+    </div>
+
+   
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); 
+        }
+
+        function alterarTexto() {
+            var elemento = document.getElementById('texto');
+            elemento.textContent = 'Agradecemos sua visita!';
+        }
+    </script>
+
+    
+    <center>
+        <iframe width="280" height="200" src="https://www.youtube.com/embed/kT05BDarUXI" title="ONÇA MOSTRA SUA FORÇA CONTRA JACARÉ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </center>
+
+</body>
+</html>
